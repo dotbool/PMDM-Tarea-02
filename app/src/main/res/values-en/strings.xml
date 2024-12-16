@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PMDM Task 2</string>
+    <string name="name_mario">Mario</string>
+    <string name="desc_mario">The main hero of the Mushroom Kingdom. Mario is very positive and always.
+        He is happy. You can recognize him by his blue overalls, his red cap and his
+        characteristic mustache. Princess Peach considers him her trusted friend, and everyone does.
+        She knows him and his brother Luigi for their acts of bravery. Mario excels in sports
+        such as tennis, golf, baseball, soccer and even kart racing. It is good in all
+        sports! He is a plumber by profession, but the truth is that he is a jack of all trades.</string>
+    <string name="skill_mario">Mario uses his powerful jumping ability and a large amount
+            of upgrades to face his archenemy, Bowser.
+    </string>
+
+
+    <string name="name_luigi">Luigi</string>
+    <string name="desc_luigi">Mario\'s brother and hero of the Mushroom Kingdom. Luigi is
+        recognized instantly by his green cap and shirt. Luigi is friendly, but a little nervous,
+        especially if there are ghosts around. However, their abilities match Mario\'s abilities,
+        so when these brothers come together, there is nothing they cannot achieve.</string>
+    <string name="skill_luigi"> Luigi is taller and can jump higher than Mario. If you pay attention,
+        You may also notice that the shape of his mustache is a little different as well.
+    </string>
+
+
+    <string name="name_peach">Princess Peach</string>
+    <string name="desc_peach">The beloved princess of the Mushroom Kingdom. He is extremely kind and
+        is always working to create a world in which everyone can live together happily.
+        Her famous pink dress is charming.
+        Princess Peach is always ready to participate in a wide variety of sports, and
+        She also loves to bake and cook.
+    </string>
+    <string name="skill_peach">She and Mario are very good friends and are always willing to
+        Help each other when you can.
+    </string>
+
+    <string name="name_toad">Toad</string>
+    <string name="desc_toad">Resident of the Mushroom Kingdom, he works in the service of Princess Peach.
+        Toad has red spots on his head, although others of his species come in a variety of
+        colors.
+    </string>
+    <string name="skill_toad">Toad is very happy and loyal. He does everything he can to help Mario and Luigi in their endeavors.
+        to protect the Mushroom Kingdom from Bowser, even if it means facing danger
+        during the process.
+
+    </string>
+    <string name="name_bowser">Bowser</string>
+    <string name="desc_bowser">The king of the Koopas. Bowser is Mario\'s archenemy and always
+        is wreaking havoc on the Mushroom Kingdom. Bowser has many henchmen who
+        They include the Koopas, Goombas, Bill Bala and Shy Guys. Every time you look at the
+        Mushroom Kingdom\'s plans are thwarted by Mario and his friends.
+    </string>
+    <string
+        name="skill_bowser"> Este poderoso enemigo posee una gran fuerza y hasta puede escupir fuego.
+    </string>
+
+
+
+    <string name="name_yoshi">Yoshi</string>
+    <string name="desc_yoshi">Mario\'s trusty companion from Yoshi\'s Island. It is green, but others of its species come in other colors, such as red, blue, pink and yellow.</string>
+    <string name="skill_yoshi">Yoshi is friendly and calm. It uses its long tongue to eat fruits and enemies, which it can turn into eggs that it can throw.</string>
+
+    <string name="name_donkey_kong">Donkey Kong</string>
+    <string name="desc_donkey_kong">The king of the jungle is distinguished by a red tie with his initials.</string>
+    <string name="skill_donkey_kong">Donkey Kong can throw gigantic barrels with the greatest of ease, and his strength is so great that the ground shakes every time he hits it.</string>
+
+    <string name="name_wario">Wario</string>
+    <string name="desc_wario">Mario\'s self-proclaimed archenemy. Wario wears purple overalls, a yellow cap, and has a zigzag mustache that you\'ll instantly recognize.
+    </string>
+    <string name="skill_wario">He has a loud personality and doesn\'t worry about the little things. He loves garlic and money.</string>
+    <string name="aplicacion_desarrollada_por">Application developed by Javier, version 1.0</string>
+    <string name="acerca_de">About:</string>
+    <string name="marioapp">MarioApp</string>
+    <string name="welcome">Welcome to the Mario\'s world</string>
+    <string name="select_pj">Character has been selected</string>
+    <string name="open_drawer">Open menú: </string>
+    <string name="close_drawer">Close menú: </string>
+    <string name="drawer_header_title">Drawer tittle: </string>
+    <string name="drawer_header_text">Drawer text: </string>
+
+
+
+
+
+</resources>
+

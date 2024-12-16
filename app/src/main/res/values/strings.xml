@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">PMDM Tarea02</string>
+    <string name="open_drawer">Abrir menú: </string>
+    <string name="close_drawer">Cerrar menú: </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_language">Idioma</string>
+
+    <string name="name_mario">Mario</string>
+    <string name="desc_mario">El héroe principal del Reino Champiñón. Mario es muy positivo y siempre
+        está alegre. Lo podrás reconocer por sus overoles de color azul, su gorra roja y su
+        característico bigote. La princesa Peach lo considera su amigo de confianza, y todo el mundo
+        los conoce a él y a su hermano Luigi por sus actos de valentía. Mario se destaca en deportes
+        como tenis, golf, béisbol, fútbol y hasta en las carreras de karts. ¡Es bueno en todos los
+        deportes! Es plomero de profesión, pero la verdad es que es un experto en todos los oficios
+        deportes! Es plomero de profesión, pero la verdad es que es un experto en todos los oficios
+        deportes! Es plomero de profesión, pero la verdad es que es un experto en todos los oficios
+        deportes! Es plomero de profesión, pero la verdad es que es un experto en todos los oficios.
+        deportes! Es plomero de profesión, pero la verdad es que es un experto en todos los oficios.
+        deportes! Es plomero de profesión, pero la verdad es que es un experto en todos los oficios.
+        deportes! Es plomero de profesión, pero la verdad es que es un experto en todos los oficios.
+        deportes! Es plomero de profesión, pero la verdad es que es un experto en todos los oficios.
+
+    </string>
+    <string name="skill_mario">Mario utiliza su poderosa habilidad para saltar y una gran cantidad
+            de mejoras para enfrentarse a su archienemigo, Bowser.
+    </string>
+
+    <string name="name_luigi">Luigi</string>
+    <string name="desc_luigi">Hermano de Mario y héroe del Reino Champiñón. Luigi es reconocido
+        instantáneamente por su gorra y camisa de color verde.
+        Luigi es amable, pero un poco de nervioso, especialmente si hay fantasmas por ahí.
+        Sin embargo, sus habilidades igualan las habilidades de Mario, así que cuando estos hermanos
+        se unen, no hay nada que no puedan lograr.</string>
+    <string name="skill_luigi">Luigi es más alto y puede saltar más alto que Mario. Si pones atención,
+        también podrás notar que la forma de su bigote también es un poco diferente.
+    </string>
+
+    <string name="name_peach">Princess Peach</string>
+    <string name="desc_peach">La querida princesa del Reino Champiñón. Es extremadamente amable y
+        siempre está trabajando para crear un mundo en el que todos puedan convivir juntos y felices.
+        Su famoso vestido color rosa es encantador.
+        La princesa Peach siempre está lista para participar en una gran variedad de deportes, y
+        también le encanta hornear y cocinar.
+    </string>
+    <string name="skill_peach">Ella y Mario son muy buenos amigos y siempre están dispuestos a
+        ayudarse mutuamente cuando pueden.
+    </string>
+
+    <string name="name_toad">Toad</string>
+    <string name="desc_toad">Residente del Reino Champiñón, trabaja al servicio de la Princesa Peach. Toad tiene manchas rojas en la cabeza, aunque otros de su especie vienen en una variedad de colores.</string>
+    <string name="skill_toad">
+        Toad es muy alegre y leal. Hace todo lo posible por ayudar a Mario y a Luigi en sus esfuerzos por proteger el Reino Champiñón de Bowser, incluso si eso significa enfrentarse al peligro durante en el proceso.
+    </string>
+
+    <string name="name_bowser">Bowser</string>
+    <string name="desc_bowser">El rey de los Koopas. Bowser es el archienemigo de Mario y siempre
+        está causando estragos en el Reino Champiñón.Bowser cuenta con muchos secuaces que incluyen
+        a los Koopas, Goombas, Bill Bala y Shy Guys. Cada vez que le pone la mirada al Reino
+        Champiñón sus planes se ven frustrados por Mario y sus amigos.
+    </string>
+    <string name="skill_bowser"> Este poderoso enemigo posee una gran fuerza y hasta puede escupir fuego.
+    </string>
+
+    <string name="name_yoshi">Yoshi</string>
+    <string name="desc_yoshi">El confiable compañero de Mario originario de la Isla de Yoshi. Es de color verde, pero otros de su especie vienen de otros colores, como rojo, azul, rosa y amarillo.</string>
+    <string name="skill_yoshi">Yoshi es amable y tranquilo. Utiliza su larga lengua para comerse las frutas y a los enemigos, los cuales puede convertir en huevos que podrá arrojar.</string>
+
+    <string name="name_donkey_kong">Donkey Kong</string>
+    <string name="desc_donkey_kong">El rey de la jungla, se distingue por una corbata roja con sus iniciales.</string>
+    <string name="skill_donkey_kong">Donkey Kong puede lanzar gigantescos barriles con la mayor facilidad, y su fuerza es tan grande que el suelo tiembla cada vez que lo golpea.</string>
+
+    <string name="name_wario">Wario</string>
+    <string name="desc_wario">El autoproclamado archienemigo de Mario. Wario viste un overol color morado, una gorra amarilla y tiene un bigote en zigzag que reconocerás al instante.
+    </string>
+    <string name="skill_wario">Posee una personalidad escandalosa y no se preocupa por las pequeñas cosas. Le encanta el ajo y dinero.</string>
+    <string name="aplicacion_desarrollada_por">Aplicación desarrollada por Javier, versión 1.0</string>
+    <string name="acerca_de">Acerca de:</string>
+    <string name="marioapp">MarioApp</string>
+    <string name="welcome">Bienvenidos al mundo de Mario</string>
+    <string name="select_pj">Se ha seleccionado el personaje: </string>
+    <string name="drawer_header_title">Drawer tittle: </string>
+    <string name="drawer_header_text">Drawer text: </string>
+
+
+</resources>

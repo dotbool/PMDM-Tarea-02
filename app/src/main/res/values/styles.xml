@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="style_detail_card" parent="CardView">
+        <item name="android:background">@drawable/gradiente_violet_red_yellow</item>
+    </style>
+
+    <style name="style_names" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">#00BCD4</item>
+        <item name="android:fontFamily">@font/lobster_regular</item>
+        <item name="android:textSize">36sp</item>
+    </style>
+
+    <style name="style_names_list" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">#E91E63</item>
+        <item name="android:fontFamily">@font/lobster_regular</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="style_desc" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:fontFamily">@font/satisfy_regular</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="style_skill" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">#3F51B5</item>
+        <item name="android:fontFamily">@font/merienda_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>

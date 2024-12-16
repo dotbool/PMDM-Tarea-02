@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="martinezruiz.javier.pmdmtarea02.models.Card" />
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/id_card"
+        android:layout_width="match_parent"
+        android:layout_height="156dp"
+        android:animateLayoutChanges="true"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+
+        >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/id_layout"
+            android:paddingTop="4dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            >
+
+            <ImageView
+                android:id="@+id/id_img"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:scaleType="fitCenter"
+                android:contentDescription="Imagen"
+                android:src="@drawable/mario"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/id_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="4dp"
+                style="@style/style_names_list"
+                android:text="Mario"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/id_img">
+
+            </TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

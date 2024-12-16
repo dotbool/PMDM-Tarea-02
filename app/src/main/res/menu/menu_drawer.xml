@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/main_item"
+        android:title="SuperMenu">
+        <menu>
+            <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/drawer_home"
+                android:checkable="true"
+                android:icon="@drawable/home_24px"
+                android:title="Home" />
+            <item
+                android:id="@+id/drawer_settings"
+                android:checkable="true"
+                android:icon="@drawable/settings_24px"
+                android:title="Settings" />
+            <item
+                android:id="@+id/drawer_language"
+                android:checkable="true"
+                android:icon="@drawable/language_24px"
+                android:title="Idioma" />
+            </group>
+        </menu>
+    </item>
+</menu>
+

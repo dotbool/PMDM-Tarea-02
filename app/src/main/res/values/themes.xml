@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PMDMTarea02" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="colorPrimary">#FFC107</item>
+        <item name="colorPrimaryDark">@color/ic_launcher_background</item>
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+    <style name="Theme.PMDMTarea02" parent="Base.Theme.PMDMTarea02" />
+
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen.IconBackground">
+
+
+
+    </style>
+</resources>
