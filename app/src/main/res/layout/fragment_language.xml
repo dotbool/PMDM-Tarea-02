@@ -6,16 +6,37 @@
     android:layout_height="match_parent"
     >
 
-    <TextView
-        android:id="@+id/language_title"
-        android:layout_height="match_parent"
+    <RadioGroup
+        android:checkedButton="@+id/enabled_selected"
         android:layout_width="match_parent"
-        android:layout_margin="8dp"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
         >
-    </TextView>
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/language"
+            />
+        <RadioButton
+            android:id="@+id/rb_spanish"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:enabled="true"
+            android:paddingStart="4dp"
+            android:text="@string/radiobutton_text_spanish"/>
+        <RadioButton
+            android:id="@+id/rb_english"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:enabled="true"
+            android:paddingStart="4dp"
+            android:text="@string/radiobutton_text_english"/>
+    </RadioGroup>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

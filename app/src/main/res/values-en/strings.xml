@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="language">Language</string>
+    <string name="shared_preferences">sharedpreferences</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_language">language</string>
     <string name="app_name">PMDM Task 2</string>
     <string name="name_mario">Mario</string>
     <string name="desc_mario">The main hero of the Mushroom Kingdom. Mario is very positive and always.
@@ -77,8 +82,11 @@
     <string name="close_drawer">Close menú: </string>
     <string name="drawer_header_title">Drawer tittle: </string>
     <string name="drawer_header_text">Drawer text: </string>
-
-
+    <string name="radiobutton_text_spanish">Spanish</string>
+    <string name="radiobutton_text_english">English\n</string>
+    <string name="preferences_app">App preferences</string>
+    <string name="language_selected_spanish">Spanish</string>
+    <string name="language_selected_english">English</string>
 
 
 

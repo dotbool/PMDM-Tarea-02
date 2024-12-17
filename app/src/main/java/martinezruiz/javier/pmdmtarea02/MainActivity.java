@@ -1,5 +1,7 @@
 package martinezruiz.javier.pmdmtarea02;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -13,7 +15,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.graphics.Insets;
+import androidx.core.os.LocaleListCompat;
 import androidx.core.splashscreen.SplashScreen;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -40,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
         SplashScreen splash = SplashScreen.installSplashScreen(this);
 
         super.onCreate(savedInstanceState);
+
 
         //        EdgeToEdge.enable(this);
 //        https://developer.android.com/reference/kotlin/androidx/core/splashscreen/SplashScreen
@@ -73,6 +78,8 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
 
         Snackbar welcome = Snackbar.make(this.findViewById(R.id.rv_supermario), R.string.welcome, 3000);
         welcome.show();
+
+
 
 
 
@@ -151,4 +158,7 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
 }
