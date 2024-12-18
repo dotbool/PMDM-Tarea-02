@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -42,8 +43,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        SplashScreen splash = SplashScreen.installSplashScreen(this);
 
+        SplashScreen splash = SplashScreen.installSplashScreen(this);
         super.onCreate(savedInstanceState);
 
 
@@ -87,11 +88,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navView = binding.navView;
         navView.setNavigationItemSelectedListener(this);
 
+
+        //establecemos un framento, por defecto el de la lista
+        //Si hacemos un switch del language, la app se reinicia y como el estado incluye el fragmento
+        //del language, si añadimos directamente el fragmento home, se rompe
+        Fragment f = getSupportFragmentManager().findFragmentById(R.id.contenedor);
+        if(f==null){
+            getSupportFragmentManager().beginTransaction().add(R.id.contenedor, new HomeFragment()).commit();
+
+        }
+
         //Mostramos un welcome cuando se inicia o reinicia la app
         Snackbar welcome = Snackbar.make(this.findViewById(R.id.contenedor), R.string.welcome, 3000);
         welcome.show();
 
         setApplicationLocale();
+
 
 
     }
@@ -189,6 +201,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
+
     @Override
     public void onSwicthLanguage(String language) {
 
@@ -205,6 +218,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         LocaleListCompat localeList = LocaleListCompat.forLanguageTags(language);
         AppCompatDelegate.setApplicationLocales(localeList);
+
     }
 
     @Override

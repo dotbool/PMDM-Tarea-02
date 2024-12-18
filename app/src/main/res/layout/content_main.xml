@@ -8,26 +8,23 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     >
 
-<!--    Podemos cargar sencillamente el primer fragment, el del recycler view, pero he optado por-->
-<!--    la opción que usa el NavhostFragment porque será lo que use en próximas versiones. -->
-<!--    <fragment-->
-<!--        android:id="@+id/nav_home"-->
+<!--    IMPORTANTE-->
+<!--        Los fragmentos xml o estáticos no se pueden reemplazar con replace().-->
+
+<!--    La siguiente versión se hará con el navhostfragment-->
+
+
+<!--    <androidx.fragment.app.FragmentContainerView-->
+<!--        android:id="@+id/nav_host_fragment_content_main"-->
+<!--        android:name="androidx.navigation.fragment.NavHostFragment"-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="match_parent"-->
-<!--        android:name="martinezruiz.javier.pmdmtarea02.ui.HomeFragment"-->
-<!--        android:label="@string/menu_home"-->
+<!--        app:defaultNavHost="true"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:navGraph="@navigation/mobile_navigation"-->
 <!--        />-->
-    <fragment
-        android:id="@+id/nav_host_fragment_content_main"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/mobile_navigation"
-        />
     <!--    NavGraph is a collection of NavDestination nodes fetchable by ID.-->
 
 </FrameLayout>

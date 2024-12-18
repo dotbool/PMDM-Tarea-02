@@ -59,7 +59,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardViewHolder> {
         holder.bind(currentCard);
         holder.itemView.setOnClickListener(view ->{
 
-            //esta forma de implemnetar esto será modificada en próximas versiones
+            //esta forma de implementar esto será modificada en próximas versiones
                 Fragment f = DetailsFragment.newInstance(
                         currentCard.getImgId(),
                         currentCard.getName(),

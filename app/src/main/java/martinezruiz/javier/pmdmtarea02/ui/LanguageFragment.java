@@ -40,6 +40,8 @@ public class LanguageFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 //        super.onCreateView(inflater,container,savedInstanceState);
         //obtenemos referencia a la clase que bindea datos y vista
+
+
         FragmentLanguageBinding binding = FragmentLanguageBinding.inflate(inflater);
 
         //creamos o rescatamos el archivo de las preferencias
