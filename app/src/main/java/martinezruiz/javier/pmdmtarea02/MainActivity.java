@@ -1,5 +1,7 @@
 package martinezruiz.javier.pmdmtarea02;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -11,6 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.os.LocaleListCompat;
 import androidx.core.splashscreen.SplashScreen;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
@@ -18,6 +22,8 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
+
+import java.util.Locale;
 
 import martinezruiz.javier.pmdmtarea02.databinding.ActivityMainBinding;
 import martinezruiz.javier.pmdmtarea02.ui.HomeFragment;
@@ -53,6 +59,8 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
 //        sigue la nomenclatura camelcase más Binding como sufijo
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        setApplicationLocale();
 
         //Este método setea una toolbar para funcionar como una Appbar
         MaterialToolbar toolbar = binding.barAppMain.barApp;
@@ -114,10 +122,10 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
             fragmentTransaction = true;
         }
 
+        System.out.println(getSupportFragmentManager().getBackStackEntryCount());
         if(fragmentTransaction){
             getSupportFragmentManager()
                     .beginTransaction()
-                    .addToBackStack(null)
                     .setReorderingAllowed(true)
                     .replace(R.id.contenedor, fragment)
                     .commit();
@@ -169,5 +177,13 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
     }
 
 
+    private void setApplicationLocale(){
+
+        if(AppCompatDelegate.getApplicationLocales().get(0) == null){
+            String languageSystem = Locale.getDefault().toString();
+            LocaleListCompat localeList = LocaleListCompat.forLanguageTags(languageSystem);
+            AppCompatDelegate.setApplicationLocales(localeList);
+        }
+    }
 
 }

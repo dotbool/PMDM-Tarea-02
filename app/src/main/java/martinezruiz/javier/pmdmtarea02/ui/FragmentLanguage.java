@@ -38,7 +38,7 @@ public class FragmentLanguage extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
+        super.onCreateView(inflater,container,savedInstanceState);
         //obtenemos referencia a la clase que bindea datos y vista
         FragmentLanguageBinding binding = FragmentLanguageBinding.inflate(inflater);
 
@@ -66,20 +66,26 @@ public class FragmentLanguage extends Fragment {
         //cuando se pulsa uno de los radiobuttons, se rescata en la app el lenguaje seleccionado,
 //        se establece y se guarda en el archivo de preferencias
 
+
         binding.rbSpanish.setOnCheckedChangeListener((buttonView, isChecked) ->
         {
             String language = isChecked ? "es" : "en";
             LocaleListCompat localeList = LocaleListCompat.forLanguageTags(language);
             AppCompatDelegate.setApplicationLocales(localeList);
             editSharedPreferences(new Pair<>("language", language));
+            getParentFragmentManager().popBackStack();
+
         });
 
         //No se ha implementado porque siempre, el rbSpanish tiene un estado. Si clikamos
 //        el rbENglis, cambia el estado del rbSpanih y se dispara el manejador del evento
-        binding.rbEnglish.setOnCheckedChangeListener((buttonView, isChecked) -> {
+//        binding.rbEnglish.setOnCheckedChangeListener((buttonView, isChecked) -> {
+//            String language = isChecked ? "es" : "en";
+//            LocaleListCompat localeList = LocaleListCompat.forLanguageTags(language);
+//            AppCompatDelegate.setApplicationLocales(localeList);
+//            editSharedPreferences(new Pair<>("language", language));
 
-
-        });
+//        });
 
         return binding.getRoot();
 

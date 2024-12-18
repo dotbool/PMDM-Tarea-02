@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.Locale;
 import java.util.Objects;
 
 import martinezruiz.javier.pmdmtarea02.R;
@@ -31,13 +32,22 @@ public class FragmentSettings extends Fragment {
                              Bundle savedInstanceState) {
 
         FragmentSettingsBinding binding = FragmentSettingsBinding.inflate(inflater);
+
         SharedPreferences sp = getActivity().getSharedPreferences(
                 getString(R.string.shared_preferences), Context.MODE_PRIVATE);
 
 
         //La primera vez que se lanza la app no existe el archivo por lo que hay que establecer
         //su valor con el valor que tenga el sistema
-        String languageSystem = Objects.requireNonNull(AppCompatDelegate.getApplicationLocales().get(0)).toString();
+
+        String languageSystem;
+        if(AppCompatDelegate.getApplicationLocales().get(0) == null){
+            languageSystem = Locale.getDefault().toString();
+        }
+        else {
+            languageSystem = AppCompatDelegate.getApplicationLocales().get(0).toString();
+
+        }
         String settingLanguage = sp.getString("language", languageSystem);
         settingLanguage = settingLanguage.equals("es") ? getString(R.string.language_selected_spanish): getString(R.string.language_selected_english);
         binding.languageSettingValue.setText(settingLanguage);
