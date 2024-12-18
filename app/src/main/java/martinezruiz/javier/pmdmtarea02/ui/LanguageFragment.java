@@ -1,14 +1,8 @@
 package martinezruiz.javier.pmdmtarea02.ui;
 
-import android.app.LocaleManager;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
-import android.content.res.Resources;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.LocaleList;
-import android.util.DisplayMetrics;
 import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,28 +11,34 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDelegate;
-import androidx.core.os.LocaleListCompat;
 import androidx.fragment.app.Fragment;
-import java.util.Locale;
-import java.util.Map;
+
 import java.util.Objects;
 
 import martinezruiz.javier.pmdmtarea02.R;
 import martinezruiz.javier.pmdmtarea02.databinding.FragmentLanguageBinding;
+import martinezruiz.javier.pmdmtarea02.models.PropertyListener;
 
 /**
  * Fragment que  maneja el idioma en el que se muestra la app
  */
-public class FragmentLanguage extends Fragment {
+public class LanguageFragment extends Fragment {
 
 
-    public FragmentLanguage() {
+    public LanguageFragment() {
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        listener = (PropertyListener) context;
+
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        super.onCreateView(inflater,container,savedInstanceState);
+//        super.onCreateView(inflater,container,savedInstanceState);
         //obtenemos referencia a la clase que bindea datos y vista
         FragmentLanguageBinding binding = FragmentLanguageBinding.inflate(inflater);
 
@@ -70,10 +70,11 @@ public class FragmentLanguage extends Fragment {
         binding.rbSpanish.setOnCheckedChangeListener((buttonView, isChecked) ->
         {
             String language = isChecked ? "es" : "en";
-            LocaleListCompat localeList = LocaleListCompat.forLanguageTags(language);
-            AppCompatDelegate.setApplicationLocales(localeList);
-            editSharedPreferences(new Pair<>("language", language));
-            getParentFragmentManager().popBackStack();
+//            LocaleListCompat localeList = LocaleListCompat.forLanguageTags(language);
+//            AppCompatDelegate.setApplicationLocales(localeList);
+//            editSharedPreferences(new Pair<>("language", language));
+//            getParentFragmentManager().popBackStack();
+            setLanguage(language);
 
         });
 
@@ -84,7 +85,7 @@ public class FragmentLanguage extends Fragment {
 //            LocaleListCompat localeList = LocaleListCompat.forLanguageTags(language);
 //            AppCompatDelegate.setApplicationLocales(localeList);
 //            editSharedPreferences(new Pair<>("language", language));
-
+//
 //        });
 
         return binding.getRoot();
@@ -117,5 +118,16 @@ public class FragmentLanguage extends Fragment {
 
     }
 
+    private PropertyListener listener;
 
+    private String language;
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+        listener.onSwicthLanguage(language);
+    }
 }

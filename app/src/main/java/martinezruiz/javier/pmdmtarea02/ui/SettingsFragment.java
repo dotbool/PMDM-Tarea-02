@@ -12,17 +12,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.Locale;
-import java.util.Objects;
 
 import martinezruiz.javier.pmdmtarea02.R;
-import martinezruiz.javier.pmdmtarea02.databinding.FragmentDetailsBinding;
 import martinezruiz.javier.pmdmtarea02.databinding.FragmentSettingsBinding;
 
 
-public class FragmentSettings extends Fragment {
+public class SettingsFragment extends Fragment {
 
 
-    public FragmentSettings() {
+    public SettingsFragment() {
         // Required empty public constructor
     }
 

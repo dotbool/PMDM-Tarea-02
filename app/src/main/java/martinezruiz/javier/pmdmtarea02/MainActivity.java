@@ -26,14 +26,15 @@ import com.google.android.material.snackbar.Snackbar;
 import java.util.Locale;
 
 import martinezruiz.javier.pmdmtarea02.databinding.ActivityMainBinding;
+import martinezruiz.javier.pmdmtarea02.models.PropertyListener;
 import martinezruiz.javier.pmdmtarea02.ui.HomeFragment;
-import martinezruiz.javier.pmdmtarea02.ui.FragmentLanguage;
-import martinezruiz.javier.pmdmtarea02.ui.FragmentSettings;
+import martinezruiz.javier.pmdmtarea02.ui.LanguageFragment;
+import martinezruiz.javier.pmdmtarea02.ui.SettingsFragment;
 
 /**
  *
  */
-public class MainActivity extends AppCompatActivity implements  NavigationView.OnNavigationItemSelectedListener{
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, PropertyListener{
 
     private ActivityMainBinding binding;
     private static final int SPLASH_DURATION = 3000;
@@ -60,7 +61,6 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        setApplicationLocale();
 
         //Este método setea una toolbar para funcionar como una Appbar
         MaterialToolbar toolbar = binding.barAppMain.barApp;
@@ -91,6 +91,8 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
         Snackbar welcome = Snackbar.make(this.findViewById(R.id.contenedor), R.string.welcome, 3000);
         welcome.show();
 
+        setApplicationLocale();
+
 
     }
 
@@ -114,15 +116,14 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
         }
         else if (item.getItemId() == R.id.drawer_settings) {
 
-            fragment = new FragmentSettings();
+            fragment = new SettingsFragment();
             fragmentTransaction = true;
         }
         else if(item.getItemId() == R.id.drawer_language){
-            fragment = new FragmentLanguage();
+            fragment = new LanguageFragment();
             fragmentTransaction = true;
         }
 
-        System.out.println(getSupportFragmentManager().getBackStackEntryCount());
         if(fragmentTransaction){
             getSupportFragmentManager()
                     .beginTransaction()
@@ -182,8 +183,33 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
         if(AppCompatDelegate.getApplicationLocales().get(0) == null){
             String languageSystem = Locale.getDefault().toString();
             LocaleListCompat localeList = LocaleListCompat.forLanguageTags(languageSystem);
+
             AppCompatDelegate.setApplicationLocales(localeList);
         }
+
     }
 
+    @Override
+    public void onSwicthLanguage(String language) {
+
+        SharedPreferences sp = getSharedPreferences(
+                getString(R.string.shared_preferences), Context.MODE_PRIVATE);
+
+
+
+//        The problem is each time you call edit() a new Editor object is created.You should hold
+//        instance of one Editor object and perform all operations on it.
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putString("language", language);
+        editor.apply();
+
+        LocaleListCompat localeList = LocaleListCompat.forLanguageTags(language);
+        AppCompatDelegate.setApplicationLocales(localeList);
+    }
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+
+    }
 }

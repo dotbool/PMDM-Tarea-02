@@ -49,7 +49,7 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        RecyclerView view = (RecyclerView) inflater.inflate(R.layout.fragment_home,container, false);
+        RecyclerView view = (RecyclerView) inflater.inflate(R.layout.fragment_home, container, false);
         view.setLayoutManager(new LinearLayoutManager(view.getContext()));
         cardService = new CardService(view.getContext());
         ArrayList<Card> cards = cardService.getCards();

@@ -13,13 +13,13 @@
 
     <fragment
         android:id="@+id/nav_settings"
-        android:name="martinezruiz.javier.pmdmtarea02.ui.FragmentSettings"
+        android:name="martinezruiz.javier.pmdmtarea02.ui.SettingsFragment"
         android:label="@string/menu_settings"
         tools:layout="@layout/fragment_settings" />
 
     <fragment
         android:id="@+id/nav_language"
-        android:name="martinezruiz.javier.pmdmtarea02.ui.FragmentLanguage"
+        android:name="martinezruiz.javier.pmdmtarea02.ui.LanguageFragment"
         android:label="@string/menu_language"
         tools:layout="@layout/fragment_language" />
 </navigation>
