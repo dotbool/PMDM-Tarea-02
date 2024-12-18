@@ -26,9 +26,11 @@ import java.util.Objects;
 import martinezruiz.javier.pmdmtarea02.R;
 import martinezruiz.javier.pmdmtarea02.databinding.FragmentLanguageBinding;
 
+/**
+ * Fragment que  maneja el idioma en el que se muestra la app
+ */
 public class FragmentLanguage extends Fragment {
 
-    private FragmentLanguageBinding binding;
 
     public FragmentLanguage() {
     }
@@ -37,12 +39,18 @@ public class FragmentLanguage extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-
+        //obtenemos referencia a la clase que bindea datos y vista
         FragmentLanguageBinding binding = FragmentLanguageBinding.inflate(inflater);
 
+        //creamos o rescatamos el archivo de las preferencias
         SharedPreferences sp = getActivity().getSharedPreferences(
                 getString(R.string.shared_preferences), Context.MODE_PRIVATE);
 
+        //Al recuperar el valor de una de las claves que haya en el archivo de preferncias, hemos de
+        //hacerlo con un valor por defecto. Se escoge el valor del idioma que tenga la app en este
+        //momento ya que puede ocurrir que no exista aún un valor para el idioma en el archivo de
+        //preferencias. De esta manera seleccionamos como botón chekeado el del idioma que
+//        esté mostrando la app, aunque toavía no esté guardado en el archivo de preferencias
         String languageSystem = Objects.requireNonNull(AppCompatDelegate.getApplicationLocales().get(0)).toString();
         String languageActual  = sp.getString("language", languageSystem);
 
@@ -54,6 +62,10 @@ public class FragmentLanguage extends Fragment {
         }
 
 
+//        https://developer.android.com/guide/topics/resources/app-languages?hl=es-419#java
+        //cuando se pulsa uno de los radiobuttons, se rescata en la app el lenguaje seleccionado,
+//        se establece y se guarda en el archivo de preferencias
+
         binding.rbSpanish.setOnCheckedChangeListener((buttonView, isChecked) ->
         {
             String language = isChecked ? "es" : "en";
@@ -62,6 +74,8 @@ public class FragmentLanguage extends Fragment {
             editSharedPreferences(new Pair<>("language", language));
         });
 
+        //No se ha implementado porque siempre, el rbSpanish tiene un estado. Si clikamos
+//        el rbENglis, cambia el estado del rbSpanih y se dispara el manejador del evento
         binding.rbEnglish.setOnCheckedChangeListener((buttonView, isChecked) -> {
 
 
@@ -72,9 +86,6 @@ public class FragmentLanguage extends Fragment {
     }
 
 
-    /**
-
-     */
 
     /**
      *  getSharePreferences obtiene el archivo cuyo nombre recibe por parámetro. Si no existe lo crea

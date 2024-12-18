@@ -7,18 +7,18 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="martinezruiz.javier.pmdmtarea02.ui.FragmentHome"
+        android:name="martinezruiz.javier.pmdmtarea02.ui.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/nav_settings"
         android:name="martinezruiz.javier.pmdmtarea02.ui.FragmentSettings"
         android:label="@string/menu_settings"
         tools:layout="@layout/fragment_settings" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_language"
         android:name="martinezruiz.javier.pmdmtarea02.ui.FragmentLanguage"
         android:label="@string/menu_language"
         tools:layout="@layout/fragment_language" />

@@ -9,17 +9,17 @@
                 android:id="@+id/drawer_home"
                 android:checkable="true"
                 android:icon="@drawable/home_24px"
-                android:title="Home" />
+                android:title="@string/menu_home" />
             <item
                 android:id="@+id/drawer_settings"
                 android:checkable="true"
                 android:icon="@drawable/settings_24px"
-                android:title="Settings" />
+                android:title="@string/menu_settings" />
             <item
                 android:id="@+id/drawer_language"
                 android:checkable="true"
                 android:icon="@drawable/language_24px"
-                android:title="Idioma" />
+                android:title="@string/menu_language" />
             </group>
         </menu>
     </item>

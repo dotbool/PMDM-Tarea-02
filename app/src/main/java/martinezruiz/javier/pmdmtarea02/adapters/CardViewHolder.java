@@ -31,26 +31,31 @@ public class CardViewHolder extends ViewHolder {
         binding.idImg.setImageResource(card.getImgId());
         binding.idText.setText(card.getName());
         // Esto se ha hecho para darle un fondo aleatorio a las cards.
-        //Supongo que con el data binding, que no se como funciona aún, se podrá hacer desde el
-        //xml si cada pojo card tuviera una variable background por ejemplo pero no voy a mezclar
-        //un  pojo con un estilo
-//        int stilo = 0;
+        //pero será modificado en próximas versiones, Android dice que la
+        //biblioteca refect degrada mucho el rendimiento de la app
 
-//        Field[] drawables = R.drawable.class.getDeclaredFields();
-//        List<Integer> list = new ArrayList<>();
-//        for(Field f: drawables){
-//           if(f.getName().startsWith("gradiente")){
-//               stilo = itemView.getContext().getResources().getIdentifier(f.getName(), "drawable", itemView.getContext().getPackageName());
-//               if(!list.contains(stilo)){
-//                   list.add(stilo);
-//               }
-//
-//                stilo = list.get(new Random().nextInt(list.size()));
-//           }
-//        }
+        //Busca todos los drawables cuyo nombre empiece por gradiente y se lo pone a la card
+        //en cuestión como background
 
-//        binding.idLayout.setBackground(ContextCompat.getDrawable(itemView.getContext(), stilo));
+        int stilo = 0;
 
+        Field[] drawables = R.drawable.class.getDeclaredFields();
+        List<Integer> list = new ArrayList<>();
+        for(Field f: drawables){
+           if(f.getName().startsWith("gradiente")){
+               stilo = itemView.getContext().getResources().getIdentifier(f.getName(),
+                       "drawable", itemView.getContext().getPackageName());
+               if(!list.contains(stilo)){
+                   list.add(stilo);
+               }
+
+                stilo = list.get(new Random().nextInt(list.size()));
+               binding.idLayout.setBackground(ContextCompat.getDrawable(itemView.getContext(), stilo));
+
+           }
+        }
+
+        //No se que hace esto.
         binding.executePendingBindings();
     }
 

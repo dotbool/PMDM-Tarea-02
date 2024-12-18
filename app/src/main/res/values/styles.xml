@@ -11,7 +11,7 @@
     </style>
 
     <style name="style_names_list" parent="TextAppearance.AppCompat">
-        <item name="android:textColor">#E91E63</item>
+        <item name="android:textColor">#FFFFFF</item>
         <item name="android:fontFamily">@font/lobster_regular</item>
         <item name="android:textSize">22sp</item>
     </style>

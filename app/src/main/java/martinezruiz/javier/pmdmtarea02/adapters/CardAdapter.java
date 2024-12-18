@@ -1,12 +1,14 @@
 package martinezruiz.javier.pmdmtarea02.adapters;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
@@ -44,13 +46,20 @@ public class CardAdapter extends RecyclerView.Adapter<CardViewHolder> {
         return new CardViewHolder(binding);
     }
 
+    /**
+     *  Se llama por la Recyclerview para mostrar los datos de cada card en la posición de la lista
+     * @param holder The ViewHolder which should be updated to represent the contents of the
+     *        item at the given position in the data set.
+     * @param position The position of the item within the adapter's data set.
+     */
     @Override
     public void onBindViewHolder(@NonNull CardViewHolder holder, int position) {
 
         Card currentCard = this.cards.get(position);
         holder.bind(currentCard);
         holder.itemView.setOnClickListener(view ->{
-                        System.out.println(view);
+
+            //esta forma de implemnetar esto será modificada en próximas versiones
                 Fragment f = DetailsFragment.newInstance(
                         currentCard.getImgId(),
                         currentCard.getName(),
@@ -60,26 +69,16 @@ public class CardAdapter extends RecyclerView.Adapter<CardViewHolder> {
                     if(f!=null){
 
                         MainActivity ma = (MainActivity) holder.itemView.getContext();
+
                         ma.getSupportFragmentManager()
                                 .beginTransaction()
                                 .replace(R.id.contenedor, f)
                                 .commit();
                     }
-//                    DrawerLayout drawer = ma.binding.drawerLayout;
-//                    drawer.closeDrawers();
         }
         );
 
 
-
-//        Intent detailsActivity = new Intent(holder.itemView.getContext(), DetailsActivity.class);
-//        detailsActivity.putExtra("name", currentCard.getName());
-//        detailsActivity.putExtra("imgId", currentCard.getImgId());
-//        detailsActivity.putExtra("imgBigId", currentCard.getImgBigId());
-//        detailsActivity.putExtra("description", currentCard.getDescription());
-//        detailsActivity.putExtra("skill", currentCard.getSkill());
-//        holder.itemView.setOnClickListener(view ->
-//                holder.itemView.getContext().startActivity(detailsActivity));
 
     }
 

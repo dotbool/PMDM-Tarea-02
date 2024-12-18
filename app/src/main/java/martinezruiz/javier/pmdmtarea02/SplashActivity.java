@@ -19,9 +19,9 @@ public class SplashActivity extends AppCompatActivity {
 
 //    /**
 //     * https://developer.android.com/reference/androidx/appcompat/app/AppCompatDelegate#setApplicationLocales(androidx.core.os.LocaleListCompat)
-//     * Cuando se realiza un cambio de idioma el sistema entra en bucle porque se produce
+//     * Cuando se realiza un cambio de idioma  puede ocurrir que el sistema entra en bucle porque se produce
 //     * un bloqueo de lectura en el subproceso principal. En este caso la API AppCompactDelegate
-//     * debe ser llamada antes de Activity.OnCreate
+//     * debe ser llamada antes de Activity.OnCreate. Aquí no ocurre
 //     * @param newBase The new base context for this wrapper.
 //     */
 //    @Override
@@ -36,10 +36,12 @@ public class SplashActivity extends AppCompatActivity {
         SplashScreen splash = SplashScreen.installSplashScreen(this);
         super.onCreate(savedInstanceState);
 
+        //Controla que actividad debe mostrarse en función de la versión de android
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.S) {
 
             setContentView(R.layout.splash);
 
+            //demoramos esta actividad unos segundos
             new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
                 @Override
                 public void run() {
@@ -51,7 +53,7 @@ public class SplashActivity extends AppCompatActivity {
 
 
         } else {
-
+                //si la versión es superior a la 12 pues vamos a la activity principal
             Intent intent = new Intent(SplashActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
@@ -60,6 +62,11 @@ public class SplashActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Método para cambiar de activity que no he usado
+     * @param from
+     * @param to
+     */
     private void goFromTo(AppCompatActivity from, Class<?> to){
         Intent intent = new Intent(from, to);
         startActivity(intent);

@@ -10,7 +10,7 @@
     <!--    xmlns:tools="http://schemas.android.com/tools"-->
     <!--    tools:openDrawer="start"-->
 
-
+<!--El primer hijo del drawer va sin gravity y width y heigth en math_parent-->
     <include
         android:id="@+id/bar_app_main"
         layout="@layout/bar_app"

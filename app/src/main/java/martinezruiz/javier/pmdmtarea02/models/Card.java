@@ -1,5 +1,8 @@
 package martinezruiz.javier.pmdmtarea02.models;
 
+/**
+ * POJO que sirve como modelo para los datos que manejamos
+ */
 public class Card {
 
     public Card(int imgId, String name, String description, String skill) {
